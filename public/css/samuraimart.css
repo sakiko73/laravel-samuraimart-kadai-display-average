@@ -162,3 +162,62 @@ body {
     letter-spacing: normal;
     color: #191919;
 }
+
+.samuraimart-favorite-add-cart {
+    border-radius: 2px;
+    color: #ffffff;
+    background-color: #0fbe9f;
+}
+
+.review-score-color {
+    color: #0fbe9f;
+}
+
+  .review-score-color:focus {
+    color: #0fbe9f;
+}
+
+.samuraimart-delete-submit-button {
+    border-radius: 2px;
+    color: #ffffff;
+    background-color: #d94b0e;
+  }
+
+th, td {
+    background-color: #f8fafc !important;
+}
+.samuraimart-star-rating-wrap{
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.samuraimart-star-rating{
+  position: relative;
+  display: block;
+  width: 70px;
+}
+.samuraimart-star-rating::before{
+  content: '★★★★★';
+  display: block;
+  color: rgb(198, 198, 198);
+}
+.samuraimart-star-rating::after{
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  content: '★★★★★';
+  color: #0fbe9f;
+  top: 0;
+  left: 0;
+}
+.samuraimart-star-rating[data-rate="0"]::after { width: 0%; }
+.samuraimart-star-rating[data-rate="0.5"]::after { width: 10%; }
+.samuraimart-star-rating[data-rate="1"]::after { width: 20%; }
+.samuraimart-star-rating[data-rate="1.5"]::after { width: 30%; }
+.samuraimart-star-rating[data-rate="2"]::after { width: 40%; }
+.samuraimart-star-rating[data-rate="2.5"]::after { width: 50%; }
+.samuraimart-star-rating[data-rate="3"]::after { width: 60%; }
+.samuraimart-star-rating[data-rate="3.5"]::after { width: 70%; }
+.samuraimart-star-rating[data-rate="4"]::after { width: 80%; }
+.samuraimart-star-rating[data-rate="4.5"]::after { width: 90%; }
+.samuraimart-star-rating[data-rate="5"]::after { width: 100%; }

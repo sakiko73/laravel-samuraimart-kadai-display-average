@@ -10,6 +10,16 @@ class Product extends Model
 {
     use HasFactory,Sortable;
 
+    protected $fillable = [
+        'name',
+        'description',
+        'price',
+        'category_id',
+        'image',
+        'recommend_flag',
+        'carriage_flag',
+    ];
+
     public function category()
     {
         return $this->belongsTo(Category::class);
@@ -21,5 +31,12 @@ class Product extends Model
     }
     public function favorited_users() {
         return $this->belongsToMany(User::class)->withTimestamps();
+    }
+
+    // averageScoreメソッドを追加
+    public function averageScore()
+    {
+        $average = $this->reviews()->avg('score');
+        return round($average, 1);  // 小数点第一位までで四捨五入
     }
 }
